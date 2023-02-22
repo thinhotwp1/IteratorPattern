@@ -19,20 +19,16 @@ public class MenuIterator implements Iterator {
         this.items = items;
     }
 
-
     @Override
     public boolean hasNext() {
-        if (i >= items.length || items[i] == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(i >= items.length || items[i] == null);
     }
 
     @Override
     public Object next() {
         MenuItem item = items[i];
-        i = i++;
+        i = i + 1;
+        System.out.println(i);
         return item;
     }
 

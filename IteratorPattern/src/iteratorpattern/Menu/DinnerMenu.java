@@ -14,17 +14,18 @@ public class DinnerMenu {
 
     static final int MAX_ITEMS = 6;
     int numberOfItem = 0;
-    MenuItem[] menuItems;
+    MenuItem[] menuItems = new MenuItem[MAX_ITEMS];
 
     public DinnerMenu() {
     }
-    
 
     public DinnerMenu(MenuItem[] menuItems) {
         this.menuItems = menuItems;
     }
-    
-    public MenuIterator createIterator(){
+
+    public MenuIterator createIterator() {
+        menuItems[0] = new MenuItem("Banh chung chay", "banh chung nhan dau", true, 10000);
+        menuItems[1] = new MenuItem("Banh chung thit", "banh chung nhan thit", false, 20000);
         return new MenuIterator(menuItems);
     }
 
