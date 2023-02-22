@@ -4,6 +4,8 @@
  */
 package iteratorpattern;
 
+import iteratorpattern.Menu.DinnerMenu;
+
 /**
  *
  * @author Administrator
@@ -14,7 +16,9 @@ public class IteratorPattern {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        DinnerMenu dinnerMenu = new DinnerMenu();
+        Waitress waitress = new Waitress(dinnerMenu);
+        waitress.printMenu();
     }
     
 }
